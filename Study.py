@@ -11,9 +11,19 @@
 #     print(num)
 #     num += 1
 
-def multi(m):
-    for n in range(1, 10):
-        print(f'{m} * {n} = {m*n:2d}')
+# def multi(m):
+#     for n in range(1, 10):
+#         print(f'{m} * {n} = {m*n:2d}')
+# multi(3)
 
+import calendar
+import tkinter as tk
 
-multi(3)
+c = calendar.TextCalendar()
+m = c.formatmonth(2021, 3)
+
+root = tk.Tk()
+t = tk.Text(root, height=7, width=20)
+t.insert(tk.END, m)
+t.pack()
+tk.mainloop()
